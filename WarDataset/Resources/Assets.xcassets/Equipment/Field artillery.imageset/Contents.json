@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Field artillery.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

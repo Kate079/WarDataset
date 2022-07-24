@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Fuel tank.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
