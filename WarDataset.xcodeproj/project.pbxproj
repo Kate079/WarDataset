@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2412D9012887233C00C373F6 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412D9002887233C00C373F6 /* CollectionViewHeader.swift */; };
-		2412D9042887349F00C373F6 /* russia_losses_equipment.json in Resources */ = {isa = PBXBuildFile; fileRef = 2412D9022887349F00C373F6 /* russia_losses_equipment.json */; };
-		2412D9052887349F00C373F6 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2412D9032887349F00C373F6 /* russia_losses_personnel.json */; };
 		2412D90828881FA700C373F6 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412D90728881FA700C373F6 /* DateCell.swift */; };
 		2412D92628886C5800C373F6 /* HorizontalCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412D92528886C5800C373F6 /* HorizontalCalendarView.swift */; };
 		2412D94028894F9900C373F6 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2412D93F28894F9900C373F6 /* DateFormatter.swift */; };
@@ -20,7 +18,7 @@
 		2419539C2880710000776C72 /* EnemyLossesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419539B2880710000776C72 /* EnemyLossesModel.swift */; };
 		2419539F2880721900776C72 /* JsonFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419539E2880721900776C72 /* JsonFiles.swift */; };
 		241953A12880722500776C72 /* DecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A02880722500776C72 /* DecodeError.swift */; };
-		241953A32880722E00776C72 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A22880722E00776C72 /* FileManager.swift */; };
+		241953A32880722E00776C72 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A22880722E00776C72 /* NetworkManager.swift */; };
 		241953A62880726100776C72 /* Personnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A42880726100776C72 /* Personnel.swift */; };
 		241953A72880726100776C72 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A52880726100776C72 /* Equipment.swift */; };
 		241953A9288077B400776C72 /* EnemyLossesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241953A8288077B400776C72 /* EnemyLossesViewController.swift */; };
@@ -40,8 +38,6 @@
 
 /* Begin PBXFileReference section */
 		2412D9002887233C00C373F6 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
-		2412D9022887349F00C373F6 /* russia_losses_equipment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_equipment.json; sourceTree = "<group>"; };
-		2412D9032887349F00C373F6 /* russia_losses_personnel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
 		2412D90728881FA700C373F6 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		2412D92528886C5800C373F6 /* HorizontalCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarView.swift; sourceTree = "<group>"; };
 		2412D93F28894F9900C373F6 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -54,7 +50,7 @@
 		2419539B2880710000776C72 /* EnemyLossesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyLossesModel.swift; sourceTree = "<group>"; };
 		2419539E2880721900776C72 /* JsonFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFiles.swift; sourceTree = "<group>"; };
 		241953A02880722500776C72 /* DecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeError.swift; sourceTree = "<group>"; };
-		241953A22880722E00776C72 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		241953A22880722E00776C72 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		241953A42880726100776C72 /* Personnel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Personnel.swift; sourceTree = "<group>"; };
 		241953A52880726100776C72 /* Equipment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		241953A8288077B400776C72 /* EnemyLossesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyLossesViewController.swift; sourceTree = "<group>"; };
@@ -241,18 +237,8 @@
 			children = (
 				244239E2288DB2EB00E09489 /* FileManager */,
 				244239E1288DB27400E09489 /* Models */,
-				244239E0288DB25F00E09489 /* Json */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		244239E0288DB25F00E09489 /* Json */ = {
-			isa = PBXGroup;
-			children = (
-				2412D9022887349F00C373F6 /* russia_losses_equipment.json */,
-				2412D9032887349F00C373F6 /* russia_losses_personnel.json */,
-			);
-			path = Json;
 			sourceTree = "<group>";
 		};
 		244239E1288DB27400E09489 /* Models */ = {
@@ -267,7 +253,7 @@
 		244239E2288DB2EB00E09489 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				241953A22880722E00776C72 /* FileManager.swift */,
+				241953A22880722E00776C72 /* NetworkManager.swift */,
 				2419539E2880721900776C72 /* JsonFiles.swift */,
 				241953A02880722500776C72 /* DecodeError.swift */,
 			);
@@ -410,8 +396,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2412D9052887349F00C373F6 /* russia_losses_personnel.json in Resources */,
-				2412D9042887349F00C373F6 /* russia_losses_equipment.json in Resources */,
 				24195380288064B800776C72 /* LaunchScreen.storyboard in Resources */,
 				2419537D288064B800776C72 /* Assets.xcassets in Resources */,
 			);
@@ -432,7 +416,7 @@
 				241953A12880722500776C72 /* DecodeError.swift in Sources */,
 				24A1492A288C15E200F3F214 /* DetailedInfoRouter.swift in Sources */,
 				241953AF288079F700776C72 /* EnemyLossesPresenter.swift in Sources */,
-				241953A32880722E00776C72 /* FileManager.swift in Sources */,
+				241953A32880722E00776C72 /* NetworkManager.swift in Sources */,
 				24C201DE2882E4DB0003DA26 /* InfoCollectionViewCell.swift in Sources */,
 				241953B628807ADC00776C72 /* EnemyLossesContentView.swift in Sources */,
 				2419539C2880710000776C72 /* EnemyLossesModel.swift in Sources */,

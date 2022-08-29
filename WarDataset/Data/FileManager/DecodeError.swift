@@ -8,15 +8,24 @@
 import Foundation
 
 enum DecodeError: Error {
-    case fileDoesntExist
+    case URLError
+    case clientError
+    case serverError
+    case dataError
     case decodeError
 
     var localizedText: String {
         switch self {
-        case .fileDoesntExist:
-            return "This file doesn't exist"
+        case .URLError:
+            return "Invalid URL"
+        case .clientError:
+            return "Unable to complete your request due to a client error. Please check your internet connection and try again"
+        case .serverError:
+            return "Invalid response from the server"
+        case .dataError:
+            return "Invalid data recieved from the server. Please try again"
         case .decodeError:
-            return "Can't decode data"
+            return "The JSON data could not be decoded correctly for its Swift model type"
         }
     }
 }

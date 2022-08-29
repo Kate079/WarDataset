@@ -106,62 +106,63 @@ extension EnemyLossesContentView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCollectionViewCell.reuseIdentifier, for: indexPath) as? InfoCollectionViewCell,
-              let equipmentViewModel = equipmentViewModel,
-              let personnelViewModel = personnelViewModel
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfoCollectionViewCell.reuseIdentifier, for: indexPath) as? InfoCollectionViewCell
         else {
             return UICollectionViewCell()
         }
 
-        switch indexPath.section {
-        case 0:
-            switch indexPath.item {
+        if let equipmentViewModel = equipmentViewModel,
+           let personnelViewModel = personnelViewModel {
+            switch indexPath.section {
             case 0:
-                cell.configure(personnelViewModel.personnel[0])
+                switch indexPath.item {
+                case 0:
+                    cell.configure(personnelViewModel.personnel[0])
+                case 1:
+                    cell.configure(personnelViewModel.personnel[1])
+                default:
+                    break
+                }
             case 1:
-                cell.configure(personnelViewModel.personnel[1])
+                switch indexPath.item {
+                case 0:
+                    cell.configure(equipmentViewModel.equipment[0])
+                case 1:
+                    cell.configure(equipmentViewModel.equipment[1])
+                case 2:
+                    cell.configure(equipmentViewModel.equipment[2])
+                case 3:
+                    cell.configure(equipmentViewModel.equipment[3])
+                case 4:
+                    cell.configure(equipmentViewModel.equipment[4])
+                case 5:
+                    cell.configure(equipmentViewModel.equipment[5])
+                case 6:
+                    cell.configure(equipmentViewModel.equipment[6])
+                case 7:
+                    cell.configure(equipmentViewModel.equipment[7])
+                case 8:
+                    cell.configure(equipmentViewModel.equipment[8])
+                case 9:
+                    cell.configure(equipmentViewModel.equipment[9])
+                case 10:
+                    cell.configure(equipmentViewModel.equipment[10])
+                case 11:
+                    cell.configure(equipmentViewModel.equipment[11])
+                case 12:
+                    cell.configure(equipmentViewModel.equipment[12])
+                case 13:
+                    cell.configure(equipmentViewModel.equipment[13])
+                case 14:
+                    cell.configure(equipmentViewModel.equipment[14])
+                case 15:
+                    cell.configure(equipmentViewModel.equipment[15])
+                default:
+                    break
+                }
             default:
                 break
             }
-        case 1:
-            switch indexPath.item {
-            case 0:
-                cell.configure(equipmentViewModel.equipment[0])
-            case 1:
-                cell.configure(equipmentViewModel.equipment[1])
-            case 2:
-                cell.configure(equipmentViewModel.equipment[2])
-            case 3:
-                cell.configure(equipmentViewModel.equipment[3])
-            case 4:
-                cell.configure(equipmentViewModel.equipment[4])
-            case 5:
-                cell.configure(equipmentViewModel.equipment[5])
-            case 6:
-                cell.configure(equipmentViewModel.equipment[6])
-            case 7:
-                cell.configure(equipmentViewModel.equipment[7])
-            case 8:
-                cell.configure(equipmentViewModel.equipment[8])
-            case 9:
-                cell.configure(equipmentViewModel.equipment[9])
-            case 10:
-                cell.configure(equipmentViewModel.equipment[10])
-            case 11:
-                cell.configure(equipmentViewModel.equipment[11])
-            case 12:
-                cell.configure(equipmentViewModel.equipment[12])
-            case 13:
-                cell.configure(equipmentViewModel.equipment[13])
-            case 14:
-                cell.configure(equipmentViewModel.equipment[14])
-            case 15:
-                cell.configure(equipmentViewModel.equipment[15])
-            default:
-                break
-            }
-        default:
-            break
         }
         return cell
     }

@@ -16,7 +16,7 @@ protocol MainFactoryProtocol {
 final class MainFactory: MainFactoryProtocol {
     func makeEnemyLossesViewController() -> EnemyLossesViewController {
         let controller = EnemyLossesViewController()
-        let interactor = EnemyLossesInteractor()
+        let interactor = EnemyLossesInteractor(networkManager: NetworkManager.shared)
         let presenter = EnemyLossesPresenter()
         let router = EnemyLossesRouter(factory: self)
 

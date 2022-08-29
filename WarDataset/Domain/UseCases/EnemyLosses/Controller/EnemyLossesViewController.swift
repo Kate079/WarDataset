@@ -80,10 +80,14 @@ final class EnemyLossesViewController: UIViewController {
 
 extension EnemyLossesViewController: EnemyLossesViewControllerProtocol {
     func displayEquipment(viewModel: EnemyLossesModel.LoadData.EquipmentViewModel) {
-        contentView?.displayEquipment(viewModel: viewModel)
+        DispatchQueue.main.async {
+            self.contentView?.displayEquipment(viewModel: viewModel)
+        }
     }
 
     func displayPersonnel(viewModel: EnemyLossesModel.LoadData.PersonnelViewModel) {
-        contentView?.displayPersonnel(viewModel: viewModel)
+        DispatchQueue.main.async {
+            self.contentView?.displayPersonnel(viewModel: viewModel)
+        }
     }
 }
