@@ -67,6 +67,7 @@ final class InfoCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 0.10
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
 
         addSubview(titleLabel)
         addSubview(countLabel)
