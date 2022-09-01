@@ -10,6 +10,7 @@ import Foundation
 protocol EnemyLossesPresenterProtocol: AnyObject {
     func presentPersonnelData(_ date: Date, _ response: EnemyLossesModel.LoadData.PersonnelResponse)
     func presentEquipmentData(_ date: Date, _ response: EnemyLossesModel.LoadData.EquipmentResponse)
+    func presentErrorAlert(with errorDescription: String, handler: (() -> Void)?)
 }
 
 final class EnemyLossesPresenter {
@@ -45,5 +46,9 @@ extension EnemyLossesPresenter: EnemyLossesPresenterProtocol {
         let viewModel = EnemyLossesModel.LoadData.EquipmentViewModel(equipment: response.equipment[equipmentIndex])
 
         viewController?.displayEquipment(viewModel: viewModel)
+    }
+
+    func presentErrorAlert(with errorDescription: String, handler: (() -> Void)?) {
+        viewController?.showErrorAlert(with: errorDescription, handler: handler)
     }
 }

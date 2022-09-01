@@ -11,6 +11,7 @@ import UIKit
 protocol EnemyLossesViewControllerProtocol: AnyObject {
     func displayEquipment(viewModel: EnemyLossesModel.LoadData.EquipmentViewModel)
     func displayPersonnel(viewModel: EnemyLossesModel.LoadData.PersonnelViewModel)
+    func showErrorAlert(with errorDescription: String, handler: (() -> Void)?)
 }
 
 final class EnemyLossesViewController: UIViewController {
@@ -89,5 +90,23 @@ extension EnemyLossesViewController: EnemyLossesViewControllerProtocol {
         DispatchQueue.main.async {
             self.contentView?.displayPersonnel(viewModel: viewModel)
         }
+    }
+
+    func showErrorAlert(with errorDescription: String, handler: (() -> Void)?) {
+        DispatchQueue.main.async {
+            let alert = AlertController(title: Constants.errorTitle, message: errorDescription)
+            alert.tapButtonOnAlertCompletion = handler
+            alert.setAction(titleForButton: Constants.okTitle)
+            self.present(alert, animated: true)
+        }
+    }
+}
+
+// MARK: - Constants
+
+extension EnemyLossesViewController {
+    private struct Constants {
+        static let errorTitle = "Something went wrong"
+        static let okTitle = "OK"
     }
 }

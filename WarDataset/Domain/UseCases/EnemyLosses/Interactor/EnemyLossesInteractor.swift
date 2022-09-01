@@ -38,8 +38,9 @@ extension EnemyLossesInteractor: EnemyLossesInteractorProtocol {
                 let response = EnemyLossesModel.LoadData.PersonnelResponse(personnel: personnelData)
                 self?.presenter?.presentPersonnelData(date, response)
             case .failure(let error):
-                print("failure: \(error.localizedText)")
-                // TODO: Implement error handling
+                self?.presenter?.presentErrorAlert(with: error.localizedText) {
+                    print("failure: \(error.localizedText)")
+                }
             }
         }
     }
@@ -51,8 +52,9 @@ extension EnemyLossesInteractor: EnemyLossesInteractorProtocol {
                 let response = EnemyLossesModel.LoadData.EquipmentResponse(equipment: equipmentData)
                 self?.presenter?.presentEquipmentData(date, response)
             case .failure(let error):
-                print("failure: \(error.localizedText)")
-                // TODO: Implement error handling
+                self?.presenter?.presentErrorAlert(with: error.localizedText) {
+                    print("failure: \(error.localizedText)")
+                }
             }
         }
     }

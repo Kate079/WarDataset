@@ -34,6 +34,7 @@
 		24A1492D288C15E200F3F214 /* DetailedInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A14927288C15E200F3F214 /* DetailedInfoInteractor.swift */; };
 		24A14934288C232B00F3F214 /* DetailedInfoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A14933288C232B00F3F214 /* DetailedInfoContentView.swift */; };
 		24C201DE2882E4DB0003DA26 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C201DD2882E4DB0003DA26 /* InfoCollectionViewCell.swift */; };
+		24E5EB8828C0A0B600E5F942 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E5EB8728C0A0B500E5F942 /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		24A14927288C15E200F3F214 /* DetailedInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoInteractor.swift; sourceTree = "<group>"; };
 		24A14933288C232B00F3F214 /* DetailedInfoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInfoContentView.swift; sourceTree = "<group>"; };
 		24C201DD2882E4DB0003DA26 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		24E5EB8728C0A0B500E5F942 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				2412D90628881F7300C373F6 /* HorizontalCalendar */,
+				24E5EB8728C0A0B500E5F942 /* AlertController.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E5EB8828C0A0B600E5F942 /* AlertController.swift in Sources */,
 				241953A62880726100776C72 /* Personnel.swift in Sources */,
 				2419539F2880721900776C72 /* JsonFiles.swift in Sources */,
 				241953B928807C5D00776C72 /* EnemyLossesRouter.swift in Sources */,
